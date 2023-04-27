@@ -1,5 +1,5 @@
- pipeline {
-     triggers {
+pipeline {
+    triggers {
   pollSCM ('* * * * *')
     }
     agent any
@@ -20,8 +20,6 @@
               stage('test') {
             steps {
                 sh 'mvn test'
-        
-            }
         }
 
               stage('deploy') {
@@ -31,3 +29,4 @@
             }
         }
     }
+}
